@@ -33,7 +33,7 @@ export default function Home({ signedIn, roasts }) {
   return (
     <>
       <section className="text-center py-12">
-        <p className="text-orange-500 font-medium mb-3">Powered by Groq · Llama 3.3</p>
+        <p className="text-orange-500 font-medium mb-3">Powered by Groq</p>
         <h1 className="text-4xl sm:text-6xl font-bold leading-tight">
           Your resume, <span className="text-orange-500">roasted</span> 🔥
         </h1>

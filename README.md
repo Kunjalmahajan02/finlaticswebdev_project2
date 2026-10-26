@@ -5,7 +5,7 @@ Upload your resume as a PDF and get a brutally honest AI review: a score out of 
 ## Tech stack
 
 - **Next.js 14** (Pages Router) with API routes
-- **Groq** (`llama-3.3-70b-versatile`) with JSON output mode
+- **Groq** (`openai/gpt-oss-120b` by default, override with `GROQ_MODEL`) with JSON output mode
 - **pdf-parse** to extract text from the uploaded PDF
 - **NextAuth.js** with GitHub sign-in
 - **Prisma + Supabase** (PostgreSQL) to store roasts
@@ -48,6 +48,7 @@ prisma/       schema.prisma (Roast model)
 | `DATABASE_URL` | Supabase → Connect → Transaction pooler (port 6543), add `?pgbouncer=true` |
 | `DIRECT_URL` | Supabase → Connect → Session pooler (port 5432) |
 | `GROQ_API_KEY` | https://console.groq.com/keys |
+| `GROQ_MODEL` | Optional. Any current model from https://console.groq.com/docs/models |
 | `NEXTAUTH_URL` | `http://localhost:3000` locally, your Vercel URL in production |
 | `NEXTAUTH_SECRET` | Any long random string |
 | `GITHUB_ID` / `GITHUB_SECRET` | GitHub → Settings → Developer settings → OAuth Apps |
